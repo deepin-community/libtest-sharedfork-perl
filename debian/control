@@ -1,0 +1,25 @@
+Source: libtest-sharedfork-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Jonathan Yu <jawnsy@cpan.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Fabrizio Regalli <fabreg@fabreg.it>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: perl,
+                     libtest-requires-perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtest-sharedfork-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libtest-sharedfork-perl.git
+Homepage: https://metacpan.org/release/Test-SharedFork
+Testsuite: autopkgtest-pkg-perl
+
+Package: libtest-sharedfork-perl
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends}
+Description: module to run tests in multiple processes and merge results
+ Test::SharedFork is utility module for tests built using Test::Builder (which
+ constitute the majority of test modules on CPAN). It allows developers to run
+ tests in multiple processes, in parallel, and combine the results together.
